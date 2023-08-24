@@ -53,23 +53,23 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lvDetalle = new System.Windows.Forms.ListView();
-            this.lvEstadistica = new System.Windows.Forms.ListView();
-            this.label14 = new System.Windows.Forms.Label();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.lvEstadistica = new System.Windows.Forms.ListView();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 106);
+            this.label1.Location = new System.Drawing.Point(22, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 15);
             this.label1.TabIndex = 0;
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1, 68);
+            this.label2.Location = new System.Drawing.Point(39, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 1;
@@ -87,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(600, 71);
+            this.label3.Location = new System.Drawing.Point(596, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 15);
             this.label3.TabIndex = 2;
@@ -96,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(408, 71);
+            this.label4.Location = new System.Drawing.Point(596, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 15);
             this.label4.TabIndex = 3;
@@ -104,30 +104,30 @@
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(75, 68);
+            this.txtCliente.Location = new System.Drawing.Point(96, 68);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(318, 23);
+            this.txtCliente.Size = new System.Drawing.Size(477, 23);
             this.txtCliente.TabIndex = 4;
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(644, 71);
+            this.txtFecha.Location = new System.Drawing.Point(653, 68);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(100, 23);
+            this.txtFecha.Size = new System.Drawing.Size(130, 23);
             this.txtFecha.TabIndex = 5;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(75, 103);
+            this.txtDireccion.Location = new System.Drawing.Point(96, 103);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(454, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(477, 23);
             this.txtDireccion.TabIndex = 6;
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(465, 71);
+            this.txtCedula.Location = new System.Drawing.Point(653, 103);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(100, 23);
+            this.txtCedula.Size = new System.Drawing.Size(130, 23);
             this.txtCedula.TabIndex = 7;
             // 
             // groupBox1
@@ -149,11 +149,17 @@
             // cboProducto
             // 
             this.cboProducto.FormattingEnabled = true;
+            this.cboProducto.Items.AddRange(new object[] {
+            "PS5 + 1 MANDO DS5",
+            "PS4(1Tb) + MANDO DS4",
+            "MANDO PS5/DS5",
+            "MANDO PS4/DS4"});
             this.cboProducto.Location = new System.Drawing.Point(6, 37);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(231, 23);
             this.cboProducto.TabIndex = 15;
             this.cboProducto.Text = "(SELECCIONE)";
+            this.cboProducto.SelectedIndexChanged += new System.EventHandler(this.cboProducto_SelectedIndexChanged);
             // 
             // btnAgregar
             // 
@@ -163,6 +169,7 @@
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtCantidad
             // 
@@ -209,10 +216,11 @@
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(31, 331);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(119, 23);
             this.btnRegistrar.TabIndex = 15;
             this.btnRegistrar.Text = "REGISTRAR BOLETA";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label8
             // 
@@ -246,7 +254,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(189, 9);
+            this.label10.Location = new System.Drawing.Point(295, 13);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(218, 30);
             this.label10.TabIndex = 19;
@@ -268,18 +276,18 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.Location = new System.Drawing.Point(653, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.Size = new System.Drawing.Size(99, 13);
             this.label12.TabIndex = 21;
-            this.label12.Text = "RUC 510012";
+            this.label12.Text = "RUC 51005451012";
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(653, 50);
+            this.lblNumero.Location = new System.Drawing.Point(653, 39);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(31, 15);
+            this.lblNumero.Size = new System.Drawing.Size(37, 15);
             this.lblNumero.TabIndex = 22;
-            this.lblNumero.Text = "0000";
+            this.lblNumero.Text = "00000";
             // 
             // lvDetalle
             // 
@@ -295,29 +303,6 @@
             this.lvDetalle.TabIndex = 23;
             this.lvDetalle.UseCompatibleStateImageBehavior = false;
             this.lvDetalle.View = System.Windows.Forms.View.Details;
-            // 
-            // lvEstadistica
-            // 
-            this.lvEstadistica.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            this.lvEstadistica.Location = new System.Drawing.Point(30, 386);
-            this.lvEstadistica.Name = "lvEstadistica";
-            this.lvEstadistica.Size = new System.Drawing.Size(729, 97);
-            this.lvEstadistica.TabIndex = 24;
-            this.lvEstadistica.UseCompatibleStateImageBehavior = false;
-            this.lvEstadistica.View = System.Windows.Forms.View.Details;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(31, 368);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(205, 15);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "RESUMEN DEL REGISTRO DE BOLETAS";
             // 
             // columnHeader1
             // 
@@ -339,6 +324,21 @@
             this.columnHeader4.Text = "IMPORTE";
             this.columnHeader4.Width = 120;
             // 
+            // lvEstadistica
+            // 
+            this.lvEstadistica.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.lvEstadistica.GridLines = true;
+            this.lvEstadistica.Location = new System.Drawing.Point(30, 386);
+            this.lvEstadistica.Name = "lvEstadistica";
+            this.lvEstadistica.Size = new System.Drawing.Size(729, 97);
+            this.lvEstadistica.TabIndex = 24;
+            this.lvEstadistica.UseCompatibleStateImageBehavior = false;
+            this.lvEstadistica.View = System.Windows.Forms.View.Details;
+            // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "NUM BOLETA";
@@ -358,6 +358,15 @@
             // 
             this.columnHeader8.Text = "MONTO TOTAL";
             this.columnHeader8.Width = 240;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(31, 368);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(205, 15);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "RESUMEN DEL REGISTRO DE BOLETAS";
             // 
             // frmBoleta
             // 
@@ -386,6 +395,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmBoleta";
             this.Text = "frmBoleta";
+            this.Load += new System.EventHandler(this.frmBoleta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
