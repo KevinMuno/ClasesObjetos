@@ -249,6 +249,7 @@
             this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label10
             // 
@@ -303,6 +304,7 @@
             this.lvDetalle.TabIndex = 23;
             this.lvDetalle.UseCompatibleStateImageBehavior = false;
             this.lvDetalle.View = System.Windows.Forms.View.Details;
+            this.lvDetalle.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvDetalle_MouseDoubleClick);
             // 
             // columnHeader1
             // 
